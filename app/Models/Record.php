@@ -4,6 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Models\Record
+ *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Record newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Record newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Record query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Record whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Record whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Record whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class Record extends Model
 {
     /**
@@ -32,4 +46,12 @@ class Record extends Model
     protected $attributes = [
 
     ];
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
 }
